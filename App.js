@@ -7,7 +7,7 @@ import { Colors} from 'react-native/Libraries/NewAppScreen';
 class App extends Component {
 
   componentDidMount(): void {
-    ToastModule.showToast("Toast With Native Module", ToastModule.LENGTH_LONG);
+    ToastModule.showToast("Toast Message Using Native Code", ToastModule.LENGTH_LONG);
   }
 
 
@@ -21,6 +21,7 @@ class App extends Component {
 }
 
 const styles = StyleSheet.create({
+
   title: {
     fontSize: 24,
     fontWeight: '600',
