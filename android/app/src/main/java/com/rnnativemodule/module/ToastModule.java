@@ -1,4 +1,4 @@
-package com.rnnativemodule;
+package com.rnnativemodule.module;
 
 import android.widget.Toast;
 
@@ -17,14 +17,14 @@ public class ToastModule extends ReactContextBaseJavaModule{
     private static final String DURATION_SHORT = "LENGTH_LONG";
     private static final String DURATION_LONG = "LENGTH_SHORT";
 
-    ToastModule(@NonNull ReactApplicationContext reactContext) {
+    public ToastModule(@NonNull ReactApplicationContext reactContext) {
         super(reactContext);
     }
 
     @NonNull
     @Override
     public String getName() {
-        return "ToastModule";
+        return "ToastModuleAndroid";
     }
 
 
@@ -39,7 +39,7 @@ public class ToastModule extends ReactContextBaseJavaModule{
 
 
     @ReactMethod
-    public void showToast(String message, int duration){
+    public void show(String message, int duration){
         Toast.makeText(getReactApplicationContext(), message, duration).show();
     }
 }
